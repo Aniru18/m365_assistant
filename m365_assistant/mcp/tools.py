@@ -57,6 +57,43 @@ def flag_email(email_id: str, status: str = "flagged"):
     - notFlagged
     """
     return mail_service.flag_email(email_id, status)
+@mcp.tool
+def mark_email_as_read(email_id: str):
+    """
+    Mark an email as read.
+
+    Use when the user says:
+    - "Mark this email as read"
+    - "Mark the last email as read"
+    """
+    return mail_service.mark_email_read(email_id)
+@mcp.tool
+def mark_email_as_unread(email_id: str):
+    """
+    Mark an email as unread.
+
+    Use when the user wants to keep it for later.
+    """
+    return mail_service.mark_email_unread(email_id)
+@mcp.tool
+def reply_to_specific_recipient(
+    original_email_id: str,
+    recipient: str,
+    body: str,
+    subject: str | None = None,
+):
+    """
+    Reply to a specific recipient only.
+
+    This is useful when the user wants to respond to
+    only one person instead of using reply-all.
+    """
+    return mail_service.reply_to_recipient(
+        original_email_id,
+        recipient,
+        body,
+        subject,
+    )
 
 
 @mcp.tool
@@ -67,7 +104,6 @@ def create_mail_folder(folder_name: str):
     Use when user asks to organize emails into folders.
     """
     return mail_service.create_mail_folder(folder_name)
-
 
 @mcp.tool
 def list_calendar_events(days_ahead: int = 7, limit: int = 20):

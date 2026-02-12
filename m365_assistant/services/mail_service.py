@@ -163,3 +163,94 @@ class MailService:
 
         response.raise_for_status()
         return response.json()
+    
+    def mark_email_read(self, email_id: str) -> Any:
+        """
+        Mark a specific email as read.
+        """
+
+        headers = self.client._headers()
+        if headers.get("status") != "success":
+            return headers
+
+        response = self.client._client.patch(
+            f"{self.client.settings.graph_base_url}/me/messages/{email_id}",
+            headers={
+                "Authorization": headers["Authorization"],
+                "Content-Type": "application/json",
+            },
+            json={"isRead": True},
+        )
+
+        response.raise_for_status()
+        return {"status": "marked_as_read"}
+    def mark_email_unread(self, email_id: str) -> Any:
+        """
+        Mark a specific email as unread.
+        """
+
+        headers = self.client._headers()
+        if headers.get("status") != "success":
+            return headers
+
+        response = self.client._client.patch(
+            f"{self.client.settings.graph_base_url}/me/messages/{email_id}",
+            headers={
+                "Authorization": headers["Authorization"],
+                "Content-Type": "application/json",
+            },
+            json={"isRead": False},
+        )
+
+        response.raise_for_status()
+        return {"status": "marked_as_unread"}
+    def reply_to_recipient(
+        self,
+        original_email_id: str,
+        recipient: str,
+        body: str,
+        subject: str | None = None,
+    ) -> Any:
+        """
+        Reply to a specific recipient only.
+
+        This does NOT use reply or replyAll endpoint.
+        Instead, it sends a new message referencing the original email.
+        """
+
+        headers = self.client._headers()
+        if headers.get("status") != "success":
+            return headers
+
+        # Fetch original email for subject reference if needed
+        original = self.get_email(original_email_id)
+
+        if isinstance(original, dict) and original.get("status") != "success":
+            return original
+
+        final_subject = subject or f"Re: {original.get('subject', '')}"
+
+        payload = {
+            "message": {
+                "subject": final_subject,
+                "body": {
+                    "contentType": "Text",
+                    "content": body,
+                },
+                "toRecipients": [
+                    {"emailAddress": {"address": recipient}}
+                ],
+            }
+        }
+
+        response = self.client._client.post(
+            f"{self.client.settings.graph_base_url}/me/sendMail",
+            headers={
+                "Authorization": headers["Authorization"],
+                "Content-Type": "application/json",
+            },
+            json=payload,
+        )
+
+        response.raise_for_status()
+        return {"status": "sent_to_specific_recipient"}
