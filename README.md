@@ -1,4 +1,4 @@
-# 🧠 M365 Assistant — Microsoft Outlook Mail and Calnder AI via MCP
+# 🧠 M365 Assistant — MCP Powered Outlook & Calendar AI
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python)
 ![Microsoft Graph](https://img.shields.io/badge/Microsoft-Graph_API-0078D4?logo=microsoft)
@@ -19,7 +19,36 @@ This project builds a **Microsoft 365 AI Assistant** using:
 - 🤖 Optional Agent layer using LangGraph + Groq, more such funcionality can be added with the mcp tools
 
 ---
+# 📌 Current Scope
 
+This project currently integrates the following Microsoft 365 services:
+
+- 📧 Outlook Mail
+- 📅 Outlook Calendar
+
+The MCP server exposes tools specifically for email management and calendar operations.
+
+At this stage, the assistant does **not** include:
+
+- Microsoft Teams
+- OneDrive file management
+- SharePoint
+- Tasks / Planner
+- Other Microsoft 365 services
+- This tools can be added simultaneously
+---
+# 🧠 Design Philosophy
+
+The project focuses first on:
+
+- Stable authentication
+- Secure Graph API communication
+- Clean tool abstraction
+- Real-world productivity use cases (Email + Calendar)
+
+The system is intentionally built to scale gradually rather than integrating all Microsoft 365 services at once.
+
+---
 # 🔥 Core Objective (Primary Goal)
 
 The main aim of this project is:
@@ -344,6 +373,8 @@ This is an advanced extension built on top of the MCP foundation.
 - Teams integration
 
 ---
+
+
 # 🤝 Contributing
 
 Contributions are welcome! and I will also be keep on adding tools
@@ -454,6 +485,7 @@ MIT License.
 **Aniruddha Shit**
 - 💼 LinkedIn: [https://linkedin.com/in/your-profile ](https://www.linkedin.com/in/aniruddha-shit-0a3b35267/) 
 - 🔗 GitHub: https://github.com/Aniru18 
+
 
 
 
