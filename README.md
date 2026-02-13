@@ -1,4 +1,4 @@
-# 🧠 M365 Assistant — MCP Powered Outlook & Calendar AI
+# 🧠 M365 Assistant — MCP Powered Outlook & Calendar Agents
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python)
 ![Microsoft Graph](https://img.shields.io/badge/Microsoft-Graph_API-0078D4?logo=microsoft)
@@ -14,6 +14,7 @@ This project builds a **Microsoft 365 AI Assistant** using:
 
 - 🐍 Python
 - 🔗 Model Context Protocol (MCP)
+- 🧠 Agentic AI Architecture  
 - 📧 Microsoft Graph API
 - 💬 Claude Desktop integration
 - 🤖 Optional Agent layer using LangGraph + Groq, more such funcionality can be added with the mcp tools
@@ -485,6 +486,7 @@ MIT License.
 **Aniruddha Shit**
 - 💼 LinkedIn: [https://linkedin.com/in/your-profile ](https://www.linkedin.com/in/aniruddha-shit-0a3b35267/) 
 - 🔗 GitHub: https://github.com/Aniru18 
+
 
 
 
