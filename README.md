@@ -1,4 +1,4 @@
-# 🧠 M365 Assistant — MCP Powered Outlook & Calendar Agents
+# 🧠 M365 Assistant — MCP Powered Outlook & Calendar Agents with Claude Desktop integration
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python)
 ![Microsoft Graph](https://img.shields.io/badge/Microsoft-Graph_API-0078D4?logo=microsoft)
@@ -486,6 +486,7 @@ MIT License.
 **Aniruddha Shit**
 - 💼 LinkedIn: [https://linkedin.com/in/your-profile ](https://www.linkedin.com/in/aniruddha-shit-0a3b35267/) 
 - 🔗 GitHub: https://github.com/Aniru18 
+
 
 
 
