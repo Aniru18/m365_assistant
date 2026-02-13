@@ -13,7 +13,7 @@ def build_graph(mcp_tools):
 
     graph = StateGraph(AgentState)
 
-    #🔥 Node 1 — Fetch Context
+    # Node 1 — Fetch Context
     
 
 
@@ -81,7 +81,7 @@ def build_graph(mcp_tools):
                     )
                 )
 
-    # 🔥 Node 2 — Create Routine
+    # Node 2 — Create Routine
     async def create_schedule(state: AgentState):
         response = await planner_llm.ainvoke([
             SystemMessage(content=PLANNER_SYSTEM_PROMPT),

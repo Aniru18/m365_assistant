@@ -20,5 +20,6 @@ class Settings:
 
         return Settings(
             client_id=client_id,
+            # you can use your own tenat id or 'common' for multi-tenant
             authority="https://login.microsoftonline.com/common",
         )

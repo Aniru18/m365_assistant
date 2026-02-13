@@ -13,19 +13,19 @@ class MailService:
         If authentication is required, returns authentication instructions.
         """
 
-        # 🔥 Step 1 — Check authentication first
+        #  Step 1 — Check authentication first
         headers = self.client._headers()
 
         # If auth not successful, return auth instructions immediately
         if isinstance(headers, dict) and headers.get("status") != "success":
             return headers
 
-        # 🔥 Step 2 — Compute date filter
+        #  Step 2 — Compute date filter
         cutoff = (
             datetime.now(timezone.utc) - timedelta(days=days)
         ).isoformat()
 
-        # 🔥 Step 3 — Call Graph API
+        #  Step 3 — Call Graph API
         response = self.client._client.get(
             f"{self.client.settings.graph_base_url}/me/mailFolders/inbox/messages",
             headers={

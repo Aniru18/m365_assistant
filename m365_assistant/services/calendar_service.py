@@ -17,13 +17,13 @@ class CalendarService:
         Returns authentication instructions if auth is required.
         """
 
-        # 🔥 Step 1 — Authentication check
+        #  Step 1 — Authentication check
         headers = self.client._headers()
 
         if isinstance(headers, dict) and headers.get("status") != "success":
             return headers
 
-        # 🔥 Step 2 — Date range
+        #  Step 2 — Date range
         now = datetime.now(timezone.utc)
         end_date = now + timedelta(days=days_ahead)
 
