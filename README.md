@@ -211,7 +211,7 @@ Claude will automatically call the correct MCP tools.
 
 When first connecting, you will see the Microsoft device login prompt:
 
-![Authentication Flow](assets/authentication.png)
+![Authentication Flow](m365_assistant/assets/authentication_flow.jpeg)
 
 ---
 
@@ -219,7 +219,7 @@ When first connecting, you will see the Microsoft device login prompt:
 
 Claude retrieving recent emails using the `list_emails` tool:
 
-![List Emails](assets/list_emails.png)
+![List Emails](m365_assistant/assets/Llisting_email.jpeg)
 
 ---
 
@@ -227,25 +227,15 @@ Claude retrieving recent emails using the `list_emails` tool:
 
 Claude fetching today's meetings:
 
-![Calendar Events](assets/calendar_events.png)
+![Calendar Events](m365_assistant/assets/calender_events.jpeg)
 
 ---
+### 📧 Making an Email Unread
 
-### 📁 Creating a Mail Folder
+You can mark any email as unread directly through Claude.
 
-Claude creating a new folder:
-
-![Create Folder](assets/create_folder.png)
-
----
-
-### 🤖 Agent Mode (Optional)
-
-AI-generated daily routine using LangGraph + Groq:
-
-![Agent Routine](assets/agent_routine.png)
-
-
+![Updating mails](m365_assistant/assets/making_unread.jpeg)
+![After updation](m365_assistant/assets/mail_after_unread.jpeg)
 ---
 
 # 🤖 Secondary Layer — Agent Mode (Optional)
@@ -305,6 +295,7 @@ The system will:
 - Identify urgent items
 - Generate a structured time-blocked schedule
 
+![Agent Routine](m365_assistant/assets/)
 ---
 
 # 🎯 Clear Separation of Responsibilities
@@ -461,4 +452,5 @@ MIT License.
 # 🧑‍💻 Author
 
 AI-powered Microsoft 365 automation system built using MCP + LangGraph + Groq.
+
 
