@@ -16,7 +16,7 @@ This project builds a **Microsoft 365 AI Assistant** using:
 - 🔗 Model Context Protocol (MCP)
 - 📧 Microsoft Graph API
 - 💬 Claude Desktop integration
-- 🤖 Optional Agent layer using LangGraph + Groq
+- 🤖 Optional Agent layer using LangGraph + Groq, more such funcionality can be added with the mcp tools
 
 ---
 
@@ -294,8 +294,8 @@ The system will:
 - Fetch calendar events
 - Identify urgent items
 - Generate a structured time-blocked schedule
-
-![Agent Routine](m365_assistant/assets/)
+- 
+![Agent Routine](m365_assistant/assets/agent_ss.jpeg)
 ---
 
 # 🎯 Clear Separation of Responsibilities
@@ -451,6 +451,8 @@ MIT License.
 
 # 🧑‍💻 Author
 
-AI-powered Microsoft 365 automation system built using MCP + LangGraph + Groq.
+**Aniruddha Shit**
+- 💼 LinkedIn: [https://linkedin.com/in/your-profile ](https://www.linkedin.com/in/aniruddha-shit-0a3b35267/) 
+- 🔗 GitHub: https://github.com/Aniru18 
 
 
